@@ -11,7 +11,7 @@ const cardDataOne = {
   imageUrl: imageOne,
   comments: [
     {
-      postedAt: moment.unix('X'), //投稿時間
+      postedAt: moment().format("dddd, MMMM Do YYYY, h:mm:ss a"), //投稿時間
       poster: "",
       body: ""
     },
@@ -25,7 +25,7 @@ const cardDataTwo = {
   imageUrl: imageTwo,
   comments: [
     {
-      postedAt: moment.unix('X'), //投稿時間
+      postedAt: moment().format("dddd, MMMM Do YYYY, h:mm:ss a"), //投稿時間
       poster: "",
       body: ""
     },
