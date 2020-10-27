@@ -4,13 +4,14 @@ import Comment from './Comment';
 
 const Comments = ({ data, theme }) => {
   const { comments } = data;
-  let postSort = data.comments;
-  
+  let postSort = data.comments.postedAt;
+
   postSort.sort(function(one, two){
     return one - two;
   })
 
-  console.log(postSort)
+  console.log()
+
 
   return (
     <ul className="comments">
