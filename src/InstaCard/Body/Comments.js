@@ -4,27 +4,23 @@ import Comment from './Comment';
 
 const Comments = ({ data, theme }) => {
   const { comments } = data;
-  let postSort = data.comments.postedAt;
 
-  postSort.sort(function(one, two){
-    return one - two;
+  const sortedComments = comments.sort(function(a, b){
+    console.log(a, b)
+    return a - b;
   })
 
-  console.log()
-
-
-  return (
-    <ul className="comments">
-      <Comment
-        theme={theme}
-        username={comments.poster}
-        comment={comments.body} />
-      <Comment
-        theme={theme}
-        username={comments.poster}
-        comment={comments.body} />
-    </ul>
-  );
+  let comment = sortedComments.map((comment) => {
+    return (
+      <ul className="comments">
+        <Comment
+          theme={theme}
+          username={comments.poster}
+          comment={comments.body}
+          key={comment.id} />
+      </ul>
+    );
+  })
 };
 
 Comments.propTypes = {

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-
 import React, { Component } from 'react';
 import { css, jsx } from '@emotion/core'
 import styled from '@emotion/styled/macro';
