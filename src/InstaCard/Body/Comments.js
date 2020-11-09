@@ -4,13 +4,16 @@ import Comment from './Comment';
 
 const Comments = ({ data, theme }) => {
   const { comments } = data;
-
+  console.log(comments)
+  
   const sortedComments = comments.sort(function(a, b){
-    console.log(a, b)
-    const intA = parseInt(a)
-    const intB = parseInt(b)
+    const intA = parseInt(a, 10)
+    const intB = parseInt(b, 10)
+    console.log(intA, intB)
     return intA - intB;
   })
+
+  console.log(sortedComments)
 
   let comment = sortedComments.map((comment) => {
     return (
