@@ -7,7 +7,9 @@ const Comments = ({ data, theme }) => {
 
   const sortedComments = comments.sort(function(a, b){
     console.log(a, b)
-    return a - b;
+    const intA = parseInt(a)
+    const intB = parseInt(b)
+    return intA - intB;
   })
 
   let comment = sortedComments.map((comment) => {
@@ -17,10 +19,12 @@ const Comments = ({ data, theme }) => {
           theme={theme}
           username={comments.poster}
           comment={comments.body}
-          key={comment.id} />
+          key={comment.postedAt} 
+          />
       </ul>
     );
   })
+  return comment
 };
 
 Comments.propTypes = {
